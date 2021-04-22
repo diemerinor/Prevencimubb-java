@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PrevenCimubb</string>
+    <string name="title_home">Mapa</string>
+    <string name="title_dashboard">Ingreso de datos</string>
+    <string name="title_notifications">Perfil</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="AIzaSyAjpzx7Bh1DeQglFGqG83rJojZdlY11c7s">AIzaSyAjpzx7Bh1DeQglFGqG83rJojZdlY11c7s</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="title_activity_denuncias">Denuncias</string>
+    <string name="title_activity_estadisticas">Estadisticas</string>
+</resources>
