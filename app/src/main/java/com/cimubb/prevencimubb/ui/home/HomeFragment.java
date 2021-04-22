@@ -137,7 +137,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                         a = jsonObject.getDouble("latitud");
                         b = jsonObject.getDouble("longitud");
                         estado = jsonObject.getString("estado");
-                        System.out.println("la weaita es "+estado);
                         tipod = jsonObject.getString("tipodenuncia");
                         Coordenadas(b,a,estado, tipod);
                     } catch (JSONException e) {
@@ -159,7 +158,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
     public void Coordenadas(double longit, double lati, String estado, String tipod){
         GoogleMap googleMap = mMap;
-        System.out.println("la weaita2 es "+estado);
         Antut(googleMap,longit,lati,estado,tipod);
     }
 
@@ -171,13 +169,10 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         final LatLng punto1 = new LatLng(lati, longit);
         System.out.println("entree4");
         if(estado.equals("Pendiente")){
-            System.out.println("la weaita3 es "+estado);
             mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)).position(punto1).title(tipod));
         }else if(estado.equals("Aprobado")){
-            System.out.println("la weaita3 es "+estado);
             mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).position(punto1).title(tipod));
         }else{
-            System.out.println("la weaita4 es "+estado);
             mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)).position(punto1).title(tipod));
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(punto1,15));
